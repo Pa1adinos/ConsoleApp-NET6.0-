@@ -1,4 +1,4 @@
-﻿using ConsoleApp_NET6._0_;
+using ConsoleApp_NET6._0_;
 using System.Xml;
 
 internal class Program
@@ -8,6 +8,7 @@ internal class Program
         //Tag5.Start();
         //Aufgabe6.Start();
         //PasswordRandomeizer.Start();
-        Zusatzaufgabe1.Start();
+        //Zusatzaufgabe1.Start();
+        Flummi.Start();
     }
 }
