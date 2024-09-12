@@ -8,7 +8,7 @@ namespace ConsoleApp_NET6._0_
 {
     internal class Kompr
     {
-        public static void Komp()
+        private static void Komp()
         {
             Console.Clear();
             Console.WriteLine("Gib ein Text (Format \"WWWJjdbhbHHH\" zum bearbeiten ein.\n");
@@ -32,7 +32,7 @@ namespace ConsoleApp_NET6._0_
             }
             Console.WriteLine("\n");
         }       
-        public static void Entkomp()
+        private static void Entkomp()
         {
             Console.Clear();
             Console.WriteLine("Gib ein Text (Format \"%5%G%2%f%2%4\" zum bearbeiten ein.\n");
