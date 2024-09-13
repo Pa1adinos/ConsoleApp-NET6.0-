@@ -9,6 +9,8 @@ internal class Program
         //Aufgabe6.Start();
         //PasswordRandomeizer.Start();
         //Zusatzaufgabe1.Start();
-        Flummi.Start();
+        //Flummi.Start();
+        //FibonacciZ.Start();
+        Kompr.Start();
     }
 }
