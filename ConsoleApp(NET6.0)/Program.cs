@@ -11,6 +11,7 @@ internal class Program
         //Zusatzaufgabe1.Start();
         //Flummi.Start();
         //FibonacciZ.Start();
-        Kompr.Start();
+        //Kompr.Start();
+        Tag6.Start();
     }
 }
