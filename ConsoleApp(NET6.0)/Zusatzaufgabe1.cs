@@ -9,7 +9,49 @@ namespace ConsoleApp_NET6._0_
 {
     internal class Zusatzaufgabe1
     {
-        
+        public static void Farbe(string[] mischung, string farbe) //Mischfarben
+        {
+            switch (farbe)
+            {
+                case "Lila":
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    Console.Write($"{mischung[0]}");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "Orange":
+                    Console.ForegroundColor = ConsoleColor.DarkYellow;
+                    Console.Write($"{mischung[1]}");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "Grün":
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Write($"{mischung[2]}");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
+        }
+
+        public static void Farbe_orig(string[] colors, string farbe) //Originalfarben
+        {
+            switch (farbe)
+            {
+                case "Rot":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write($"{colors[0]}");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "Gelb":
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write($"{colors[1]}");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+                case "Blau":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write($"{colors[2]}");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
+        }
         public static void Start()
         {
             bool programm = true;
@@ -26,14 +68,22 @@ namespace ConsoleApp_NET6._0_
                 {
                     //Auswahl 1. Farbe
 
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("1 - Rot     ");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("2 - Gelb     ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write("3 - Blau\n");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Wähle die Nummer erster Farbe aus :");
-                    Console.WriteLine("1 - Rot     2 - Gelb     3 - Blau");
 
                     try
                     {
                         choice = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();
-                        Console.WriteLine($"Die erste Farbe ist:\t{colors[choice - 1]}\n");
+                        Console.Write($"Die erste Farbe ist:\t");
+                        Farbe_orig(colors, colors[choice - 1]);
+                        Console.WriteLine("\n");
                     }
                     catch
                     {
@@ -61,16 +111,28 @@ namespace ConsoleApp_NET6._0_
 
                 while (zweite_wahl)
                 {
-                    Console.WriteLine($"Ersze Farbe: {colors[choice - 1]}\n");
+                    Console.Write($"Ersze Farbe: ");
+                    Farbe_orig(colors, colors[choice - 1]);
+                    Console.WriteLine("\n");
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.Write("1 - Rot     ");
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write("2 - Gelb     ");
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    Console.Write("3 - Blau\n");
+                    Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Wähle die Nummer zweiter Farbe aus :");
-                    Console.WriteLine("1 - Rot     2 - Gelb     3 - Blau");
 
                     try
                     {
                         choice2 = Convert.ToInt32(Console.ReadLine());
                         Console.Clear();
-                        Console.WriteLine($"Ersze Farbe: {colors[choice - 1]}\n");
-                        Console.WriteLine($"Die zweite Farbe ist:\t{colors[choice2 - 1]}\n");
+                        Console.Write("Ersze Farbe: ");
+                        Farbe_orig(colors, colors[choice - 1]);
+                        Console.WriteLine("\n");
+                        Console.Write($"Die zweite Farbe ist:\t");
+                        Farbe_orig(colors, colors[choice2 - 1]);
+                        Console.WriteLine("\n");
                     }
                     catch
                     {
@@ -117,10 +179,34 @@ namespace ConsoleApp_NET6._0_
 
                 switch (choice + choice2)
                 {
-                    case 4: Console.WriteLine($"Beim Mischen Farbe \"{colors[choice - 1]}\" und Farbe \"{colors[choice2 - 1]}\"\nbekommen wir Farbe \"{mischung[0]}\""); break;
-                    case 3: Console.WriteLine($"Beim Mischen Farbe \"{colors[choice - 1]}\" und Farbe \"{colors[choice2 - 1]}\"\nbekommen wir Farbe \"{mischung[1]}\""); break;
-                    case 5: Console.WriteLine($"Beim Mischen Farbe \"{colors[choice - 1]}\" und Farbe \"{colors[choice2 - 1]}\"\nbekommen wir Farbe \"{mischung[2]}\""); break;
-                    default: Console.WriteLine("Wir haben Dreck gemischt :("); break;
+                    case 4:
+                        Console.Write("Beim Mischen Farbe \"");
+                        Farbe_orig(colors, colors[choice - 1]);
+                        Console.Write("\" und Farbe \"");
+                        Farbe_orig(colors, colors[choice2 - 1]);
+                        Console.Write("\"\nbekommen wir Farbe \t\"");
+                        Farbe(mischung, mischung[0]); Console.Write("\"");
+                        break;
+                    case 3:
+                        Console.Write("Beim Mischen Farbe \"");
+                        Farbe_orig(colors, colors[choice - 1]);
+                        Console.Write("\" und Farbe \"");
+                        Farbe_orig(colors, colors[choice2 - 1]);
+                        Console.Write("\"\nbekommen wir Farbe \t\"");
+                        Farbe(mischung, mischung[1]); Console.Write("\"");
+                        break;
+                    case 5:
+                        Console.Write("Beim Mischen Farbe \"");
+                        Farbe_orig(colors, colors[choice - 1]);
+                        Console.Write("\" und Farbe \"");
+                        Farbe_orig(colors, colors[choice2 - 1]);
+                        Console.Write("\"\nbekommen wir Farbe \t\"");
+                        Farbe(mischung, mischung[2]); Console.Write("\"");
+                        break;
+                    default: 
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.WriteLine("Wir haben Dreck gemischt :(");
+                        break;
                 }
 
                 // Noch mal?
