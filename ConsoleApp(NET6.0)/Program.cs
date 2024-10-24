@@ -32,6 +32,13 @@ internal class Program
         //Übungsblatt2809.Start();
         //AddTwoNumbers.Start();
         //Aufgabe15.Start();
-        Aufgabe16.Start();
+        //Aufgabe16.Start();
+        //Aufgabe_15_10_24.Start();
+        //Aufgabe_17_10_2024_1.Start();
+        //Aufgabe_17_10_2024_2.Start();
+        //Aufgabe_17_10_2024_3.Start();
+        //Aufgabe_22_10_24.Nr12();
+        //TeilRechn.Start2();
+        SA1.Start();
     }
 }
