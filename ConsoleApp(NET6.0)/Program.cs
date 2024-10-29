@@ -38,7 +38,11 @@ internal class Program
         //Aufgabe_17_10_2024_2.Start();
         //Aufgabe_17_10_2024_3.Start();
         //Aufgabe_22_10_24.Nr12();
-        //TeilRechn.Start2();
-        SA1.Start();
+        //TeilRechn.Start1();
+        //SA1.Start();
+        //Switchcase.Start();
+        //Aufgabe_18.Start();
+        Aufgabe_19.Start();
+        //Mario_Beep.Start();
     }
 }
