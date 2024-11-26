@@ -42,7 +42,17 @@ internal class Program
         //SA1.Start();
         //Switchcase.Start();
         //Aufgabe_18.Start();
-        Aufgabe_19.Start();
+        //Aufgabe_19.Start();
         //Mario_Beep.Start();
+        //Aufgabe_schleife.Start5();
+        //Aufgabe_05_11_24_N1.Start4();
+        //Aufgabe_05_11_24_N2.Start9();
+        //Aufgabe20.Start();
+        //Tag7.Start();
+        //Aufgabe21.Start();
+        //Schleife.Start1();
+        //Aufgabe22.Start();
+        //SQL_generator.Start();
+        StruktDia.Start3();
     }
 }
