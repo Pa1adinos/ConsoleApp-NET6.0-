@@ -53,6 +53,12 @@ internal class Program
         //Schleife.Start1();
         //Aufgabe22.Start();
         //SQL_generator.Start();
-        StruktDia.Start3();
+        //StruktDia.Start3();
+        //BobleSort.Start();
+        //MinMaxSort.Start();
+        //Aufgabe23.Start();
+        //Aufgabe_03_12_24.Start6();
+        //SA2.Prog2();
+
     }
 }

@@ -12,7 +12,7 @@ namespace ConsoleApp_NET6._0_
 {
     internal class StruktDia
     {
-        public static void Start()
+        public static void Start1()
         {
             Console.WriteLine("1.\n");
             int urlaub = 26, alter = 0, zug = 0;
@@ -117,11 +117,11 @@ namespace ConsoleApp_NET6._0_
                 }
                 else if (procent < 95)
                 {
-                    meteo_array[i] = rnd.Next(60, 131);
+                    meteo_array[i] = rnd.Next(60, 101);
                 }
                 else
                 {
-                    meteo_array[i] = rnd.Next(130, 201);
+                    meteo_array[i] = rnd.Next(100, 131);
                 }
                 Console.WriteLine($"{i + 1}\t\t{meteo_array[i]}");
                 if (meteo_array[i] > max)
